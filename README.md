@@ -1,4 +1,4 @@
-# cse382 - Mobile App Development
+# CSE-382 - Mobile App Development
 
 Provided projects I built within my Mobile App Development course, including my final project GradeBook. 
 
