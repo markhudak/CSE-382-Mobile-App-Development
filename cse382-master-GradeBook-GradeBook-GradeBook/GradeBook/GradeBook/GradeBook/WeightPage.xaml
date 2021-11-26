@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GradeBook.WeightPage" >
+    <ContentPage.Content>
+        <StackLayout x:Name="stack" BackgroundColor="Aquamarine" Padding="50,50,50,0" >
+            <Image x:Name="img" HorizontalOptions="Start"/>
+            <Label x:Name="crsLab" Text="" FontFamily="Chalkboy" FontSize="Title" HorizontalOptions="End"/>
+            <Label Text="Test" FontFamily="Chalkboy" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="testLab" BindingContext="{x:Reference sli1}" Text="{Binding Value, StringFormat='{0:F0}'}" HorizontalOptions="Center" />
+            <Slider x:Name="sli1" WidthRequest="200" Minimum="0" Maximum="100" ValueChanged="ValueChanged1"
+                    Value="{Binding Scale, Mode=OneWay}" HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Quiz" FontFamily="Chalkboy" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="quizLab" BindingContext="{x:Reference sli2}" Text="{Binding Value, StringFormat='{0:F0}'}" HorizontalOptions="Center" />
+            <Slider x:Name="sli2" WidthRequest="200" Minimum="0" Maximum="100" ValueChanged="ValueChanged2"
+                    Value="{Binding Scale, Mode=OneWay}" HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Homework" FontFamily="Chalkboy" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="hwLab" BindingContext="{x:Reference sli3}" Text="{Binding Value, StringFormat='{0:F0}'}" HorizontalOptions="Center" />
+            <Slider x:Name="sli3" WidthRequest="200" Minimum="0" Maximum="100" ValueChanged="ValueChanged3"
+                    Value="{Binding Scale, Mode=OneWay}" HorizontalOptions="CenterAndExpand" />
+
+            <Label x:Name="ideal" Text="" TextColor="Red" FontFamily="Chalkboy" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradeBook.StudentPage"
+    BackgroundImageSource="nbpaper2.png">
+
+    <ContentPage.Content>
+        <Grid  Padding="30, 10, 30, 10" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="weights"  FontFamily="SchoolTeacher" FontAttributes="Bold" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            
+            <Button x:Name="del"  Text="Delete" FontFamily="SchoolTeacher" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" Clicked="delButton_Clicked" />
+
+            <Label x:Name="namLab" VerticalOptions="Center" FontFamily="SchoolTeacher" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" 
+                      Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label x:Name="crsLab" VerticalOptions="End" FontAttributes="Bold" FontFamily="SchoolTeacher" Grid.Row="0" Grid.Column="5" />
+
+            <Label x:Name="gpaLab" TextColor="Blue" Grid.Row="2" Grid.Column="5"  VerticalOptions="End" FontFamily="SchoolTeacher" FontAttributes="Bold"
+                   FontSize="Large" HorizontalOptions="Center" />
+
+            <Label x:Name="gpaPercLab" TextColor="Navy" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2"  VerticalOptions="Start" FontAttributes="Bold"
+                   FontSize="Medium" HorizontalOptions="End" />
+
+            <Frame BorderColor="blue" Grid.Row="1" Grid.RowSpan="4"  Grid.Column="2" Grid.ColumnSpan="2" >
+                <ListView x:Name="lv" HorizontalOptions="CenterAndExpand"  WidthRequest="150" ItemSelected="lv_ItemSelected"
+                     Grid.Row="1" Grid.RowSpan="4"  Grid.Column="2" Grid.ColumnSpan="2" />
+            </Frame>
+
+            <Label x:Name="info" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Blue" />
+            <Label x:Name="empty" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" FontSize="30" VerticalOptions="Center" TextColor="Red" FontFamily="SchoolTeacher" HorizontalOptions="Start" FontAttributes="Bold" />
+            <Label x:Name="note" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" FontSize="Small" VerticalOptions="Center" TextColor="Red" FontFamily="SchoolTeacher" HorizontalOptions="Start" FontAttributes="Bold" />
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
